@@ -3,12 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>年会专题</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="daterangepicker/daterangepicker.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="banner">
-    <img src="img/indexbanner.jpg">
-    <a class="orderbtn" href="javascript:;">一键下单</a>
+<div class="banner-wrapper">
+    <div class="banner">
+        <img src="img/indexbanner.jpg">
+        <a class="orderbtn" href="javascript:;">一键下单</a>
+    </div>
 </div>
 
 <div class="section">
@@ -106,7 +110,7 @@
                 <span class="red">*</span>
                 <p>年会时间</p>
                 <div class="time">
-                    <input type="text" placeholder="选择时间">
+                    <input id="config-demo" type="text" placeholder="选择时间">
                 </div>
             </li>
         </ul>
@@ -133,8 +137,13 @@
 </ul>
 </body>
 <script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="daterangepicker/daterangepicker.js"></script>
+<script src="daterangepicker/bootstrap-datetimepicker.zh-CN.js"></script>
 <script type="text/javascript">
     $(function(){
+        /*下拉框*/
         $(".select>p").on("click",function(e){
             $(".select").toggleClass("open");
             e.stopPropagation();
@@ -149,20 +158,35 @@
         $(document).on("click",function(){
             $(".select").removeClass("open");
         });
+        $('.metformul>li').on('click',function(){
+            $(this).find('input').focus();
+        });
 
         /*侧边显示/隐藏、返回顶部*/
         $(document).on('scroll',function(){
             var docScrollTop=$(document).scrollTop();
             if(docScrollTop>1000){
-                $('.sidefu').slideDown();
+                $('.sidefu').removeClass('hide');
             }else{
-                $('.sidefu').slideUp();
+                $('.sidefu').addClass('hide');
             }
         });
         $('.js-backtop').on('click',function(){
             $('body,html').animate({scrollTop:0},1000);
             return false;
         });
+
+        /**日历初始化**/
+        $('#config-demo').daterangepicker({
+            autoApply: true,
+            format: "YYYY-MM-DD",
+            language:  'zh-CN',
+            opens : 'left',
+            locale : {
+                format: moment.localeData().longDateFormat('L'),
+                separator: ' - ',
+            }
+        }, function(start, end, label) { });
     });
 </script>
 </html>
