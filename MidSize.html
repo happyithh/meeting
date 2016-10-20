@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>中型年会</title>
+    <link rel="stylesheet" href="./swiper/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <h1></h1>
+    <div class="swiper-container swiper-b1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-piece">
+                    <div class="slide-piece-left">
+                        <img src="http://www.atool.org/placeholder.png?size=774x515&text=图片&&bg=836&fg=fff" alt="">
+                        <div class="slide-des">
+                            <p class="p1">云SPACE上海中成</p>
+                            <p class="p2"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination" style="display: none"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</body>
+<script type="text/javascript" src="./swiper/swiper-3.3.1.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-b1', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        centeredSlides: false,
+        spaceBetween: 10,
+        paginationHide:true
+    });
+</script>
+<style>
+
+    .swiper-b1 .slide-piece{
+        width: 774px;
+    }
+    .swiper-b1 .slide-piece .slide-des{
+        background-color: #272335;
+        padding: 20px 25px 20px 30px;
+    }
+
+</style>
+</html>
