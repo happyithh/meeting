@@ -7,11 +7,12 @@
 </head>
 <body>
 <div class="banner">
-    <img src="">
+    <img src="img/indexbanner.jpg">
     <a class="orderbtn" href="javascript:;">一键下单</a>
 </div>
 
 <div class="section">
+    <img src="img/section1.jpg">
     <div class="fr text">
         <div class="title">7000㎡+超大年会空间</div>
         <div class="titfu">
@@ -28,7 +29,8 @@
 </div>
 
 <div class="section">
-    <div class="fl text">
+    <img src="img/section2.jpg">
+    <div class="fl text" style="width: 700px">
         <div class="title">中型企业年会</div>
         <div class="titfu">
             <p>除了酒店宴会厅，我们还能在哪里办？</p>
@@ -44,6 +46,7 @@
 </div>
 
 <div class="section">
+    <img src="img/section3.jpg">
     <div class="fr text">
         <div class="title">被老板嫌弃没有创意的年会<br>不是一个好的年会</div>
         <div class="titfu">云SPACE精选 － 创意年会空间推荐</div>
@@ -57,7 +60,8 @@
 </div>
 
 <div class="section">
-    <div class="fl text">
+    <img src="img/section4.jpg">
+    <div class="fl text" style="width: 700px">
         <div class="title">不在上海开年会？<br>云SPACE依旧为您提供更多选择</div>
         <div class="titfu">
             <p>更多城市</p>
@@ -70,6 +74,7 @@
 
 <!--表单-->
 <div class="section">
+    <img src="img/section5.jpg">
     <div class="fr metform">
         <ul class="metformul">
             <li class="clearfix">
@@ -87,7 +92,7 @@
                 <input type="text" placeholder="请输入6位数验证码">
                 <a class="yzcode bgyellow" href="javascript:;">获取验证码</a>
             </li>
-            <li class="select clearfix">
+            <li class="select">
                 <div class="title">年会人数</div>
                 <p>60人</p>
                 <ul>
@@ -100,13 +105,8 @@
             <li class="clearfix">
                 <span class="red">*</span>
                 <p>年会时间</p>
-                <div class="time clearfix">
-                    <div class="startime">
-                        <input type="text" placeholder="选择开始时间">
-                    </div>
-                    <div class="endtime">
-                        <input type="text" placeholder="选择结束时间">
-                    </div>
+                <div class="time">
+                    <input type="text" placeholder="选择时间">
                 </div>
             </li>
         </ul>
@@ -117,6 +117,7 @@
 
 <!--关于云space-->
 <div class="section aboutyun">
+    <img src="img/section6.jpg">
     <div class="fl text">
         <div class="title">关于云SPACE</div>
         <p>云SPACE为所有客户提供便捷的一站式解决方案，客户只需通过电话或网站直接下单，即可获得云SPACE从活动场地、活动搭建、设备租赁到报批审批等一系列活动流程的支持。</p>
@@ -125,6 +126,12 @@
     </div>
 </div>
 
+<ul class="sidefu hide">
+    <li class="telp"><img src="img/telpl.png"></li>
+    <li class="qq"><img src="img/qq.png"><p></p></li>
+    <li class="backtop js-backtop"><img src="img/backtop.png"></li>
+</ul>
+</body>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">
     $(function(){
@@ -142,7 +149,20 @@
         $(document).on("click",function(){
             $(".select").removeClass("open");
         });
+
+        /*侧边显示/隐藏、返回顶部*/
+        $(document).on('scroll',function(){
+            var docScrollTop=$(document).scrollTop();
+            if(docScrollTop>1000){
+                $('.sidefu').slideDown();
+            }else{
+                $('.sidefu').slideUp();
+            }
+        });
+        $('.js-backtop').on('click',function(){
+            $('body,html').animate({scrollTop:0},1000);
+            return false;
+        });
     });
 </script>
-</body>
 </html>
