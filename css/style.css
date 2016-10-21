@@ -7,6 +7,10 @@ h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
 address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
 a { color:#666; text-decoration:none;display: inline-block;}
 img { border:none; }
+.img>img{
+    width: 100%;
+    height: 100%;
+}
 ol,ul,li { list-style:none; }
 img{
     background-color: #ddd;
@@ -40,7 +44,21 @@ a:hover,a:active,a:focus{
 .red{color:#e92332;}
 a.bggray{background: #999;}
 .bgyellow{background:#f59914;}
+.bgpurple{background:#350443;}
+.bggreen{background:#00b3b9;}
+.bgred{background:#e92332;}
+.bgbrown{background:#be956a;}
 
+.purple>h2{color: #350443;}
+.green>h2{color: #00b3b9;}
+.red>h2{color: #e92332;}
+.brown>h2{color: #be956a;}
+
+
+.purple .adg-cont .fl p{background: #350443;}
+.green .adg-cont .fl p{background: #00b3b9;}
+.red .adg-cont .fl p{background: #e92332;}
+.brown .adg-cont .fl p{background: #be956a;}
 
 body{padding-bottom: 50px;}
 
@@ -162,7 +180,7 @@ body{padding-bottom: 50px;}
 
 .metform{
     width: 450px;
-    padding: 45px 90px;
+    padding: 45px 90px 30px;
     position: relative;
     z-index: 2;
     box-sizing: content-box;
@@ -268,7 +286,7 @@ body{padding-bottom: 50px;}
     background: #e0e0e0;
 }
 .select ul li.selected{
-    background: #f59914;
+    background: #000;
     color: #fff;
 }
 @keyframes slide-down{
@@ -297,8 +315,123 @@ body{padding-bottom: 50px;}
     transition: all 0.3s ease-in;
 }
 
+/**全国年会**/
+.nation-section>h2{
+    font-size:36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.gz-cont li{
+    float: left;
+    width: 595px;
+    height: 750px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+.gz-cont li:nth-child(2n+2){
+    margin-right: 0;
+}
+.gz-cont li .img{
+    width: 100%;
+    height: 400px;
+}
+.gz-cont li .text{
+    padding: 20px;
+}
+.gz-cont li .text h5{
+    font-size:32px;
+    line-height:32px;
+    margin: 10px 0 30px;
+    text-align: center;
+}
+.gz-cont li .text p{
+    font-size:22px;
+    line-height: 1.35em;
+}
+.shzh-cont>li{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.shzh-cont>li>img{
+    width: 1200px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 1;
+}
+.shzh-cont>li .text{
+    width: 600px;
+    height: 400px;
+    background: #fff;
+    padding: 30px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+.shzh-cont>li .text h5{
+    font-size:32px;
+    line-height: 42px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.shzh-cont>li .text p{
+    font-size:22px;
+    line-height: 1.35em;
+}
+.adg-cont .fl{
+    width: 500px;
+}
+.adg-cont .fl p{
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.adg-cont .fr{
+    width: 660px;
+    overflow: hidden;
+}
+.adg-cont .fr p{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.step{
+    width: 560px;
+    padding: 75px 60px 10px;
+}
+.step li{
+    font-size:32px;
+    line-height: 32px;
+    margin-bottom: 70px;
+}
+.step li strong{
+    font-weight: bold;
+    margin-right: 20px;
+}
+.step .telphone {
+    font-size: 26px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 65px;
+    background: url("../img/icon-tel.jpg") no-repeat left center;
+    margin-top: 110px;
 
-
+}
 
 
 
@@ -571,6 +704,74 @@ body{padding-bottom: 50px;}
     box-pack: center;
     box-align: center;
 }
+
+/*创意年会*/
+.chyi-cont>li{height: auto;}
+.chyi-cont .fl{
+    width: 900px;
+    height: 600px;
+    position: relative;
+}
+.chyi-cont .fl>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 1;
+}
+.chyi-cont .fl .text{
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+}
+.chyi-cont .fr{
+    width: 300px;
+    height: 600px;
+    overflow: hidden;
+}
+.chyi-cont .fr dd{
+    width: 300px;
+    height: 200px;
+}
+.chyi-cont .topcont{
+    width: 1200px;
+    height: 474px;
+    position: relative;
+    overflow: hidden;
+}
+.chyi-cont .topcont>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 1;
+}
+.chyi-cont .topcont .text{
+    margin-top: 33px;
+    position: relative;
+    z-index: 2;
+}
+.chyi-cont .botmcont dd{
+    float: left;
+    width: 400px;
+    height: 150px;
+}
+.morecont .title{
+    font-size: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.morecont li{
+    float: left;
+    width: 292px;
+    height: 202px;
+    margin-right: 10px;
+}
+.morecont li:last-child{margin-right: 0;}
 
 
 
