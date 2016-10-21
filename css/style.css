@@ -454,6 +454,9 @@ body{padding-bottom: 50px;}
     margin: 10px 0;
     font-family:PingFangHK-Regular;
 }
+.nav-list.nav-4 a{
+    width: 300px;
+}
 .nav-list a:last-child{
     border-right: 0;
 }
@@ -576,9 +579,14 @@ body{padding-bottom: 50px;}
     position: relative;
     margin-right: 10px;
 }
+.db-recommend ul li a{
+    display: block;
+    height: 100%;
+}
 .db-recommend ul li img{
-    width: 292px;
-    height: 210px;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 .db-recommend ul li p{
     background:#272335;
@@ -773,6 +781,152 @@ body{padding-bottom: 50px;}
 }
 .morecont li:last-child{margin-right: 0;}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*大型年会*/
+.yun-h1{
+    font-size:36px;
+    color:#be956a;
+    line-height:36px;
+    font-weight: bold;
+    margin: 50px 0px;
+    line-height: 40px;
+    padding-left: 70px;
+    position: relative;
+}
+.yun-h1:before{
+    content:'';
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: #be956a;
+    left: 0;
+}
+.hot-place{
+    position: relative;
+    margin-bottom: 10px;
+    height: 500px;
+}
+.hot-place img{
+    width:800px;
+    height:500px;
+    display: block;
+}
+.hot-place .des{
+    position: absolute;
+    background:#353535;
+    width:550px;
+    height:300px;
+    right: 0;
+    top:50%;
+    padding:30px 20px 0 20px;
+    margin-top: -150px;
+}
+.hot-place .des p.ptitle{
+    font-size:32px;
+    color:#fff;
+    line-height:32px;
+    margin-bottom: 30px;
+}
+.hot-place .des p{
+    font-size:22px;
+    color:#ffffff;
+    text-align:justify;
+    margin-bottom: 30px;
+}
+.large-size.db-recommend ul li{
+    width:393px;
+    height:262px;
+}
+.large-size.db-recommend ul li p{
+    height:50px;
+    line-height: 50px;
+}
+.large-size.db-recommend{
+    margin-bottom: 30px;
+}
+.v2.hot-place img{
+    position: absolute;
+    right: 0;
+}
+.v2.hot-place .des{
+    z-index: 10;
+    left: 0;
+}
+.assort-service{
+    position: relative;
+}
+.assort-service .service-top{
+    position: relative;
+    height: 400px;
+    margin-bottom: 10px;
+}
+.assort-service .service-top img{
+    width: 100%;
+    height:400px;
+    display: block;
+    float: left;
+}
+.assort-service .service-top .des{
+    background:rgba(0,0,0,0.80);
+    width:450px;
+    height:120px;
+    position: absolute;
+    right: 120px;
+    margin-top: -60px;
+    top: 50%;
+    padding: 25px;
+    padding-bottom: 0;
+}
+.assort-service .service-top .des p{
+    font-size:16px;
+    color:#cccccc;
+    text-align:left;
+}
+.service.db-recommend ul{
+    padding-left: 322px;
+}
+.service.db-recommend ul li{
+    margin-right: 1px;
+}
+.assort-service .service-dtl{
+    position: absolute;
+    bottom: 0;
+    background:#353535;
+    width:292px;
+    height:300px;
+    left: 20px;
+}
+.assort-service .service-dtl{
+    padding: 30px 20px;
+}
+.assort-service .service-dtl p.ptitle{
+    font-size:26px;
+    color:#ffffff;
+    line-height:28px;
+    text-align:left;
+    margin-bottom: 30px;
+}
+.assort-service .service-dtl p{
+    font-size:18px;
+    color:#ffffff;
+    text-align:justify;
+}
 
 
 
