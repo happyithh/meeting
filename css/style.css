@@ -1,4 +1,4 @@
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,label,p,blockquote,table,th,td { margin:0; padding:0;box-sizing: border-box;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,label,p,blockquote,table,th,td,a{ margin:0; padding:0;box-sizing: border-box;}
 
 body { background:#f2f2f2; color:#000; font-size:14px;position: relative;width: 100%;height: 100%; font-family: "PingFangHK-Thin", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;}
 table { border-collapse:collapse; }
@@ -7,6 +7,10 @@ h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
 address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
 a { color:#666; text-decoration:none;display: inline-block;}
 img { border:none; }
+.img>img{
+    width: 100%;
+    height: 100%;
+}
 ol,ul,li { list-style:none; }
 input, textarea, select, button { font-size:14px; outline: none;border: none;display: inline-block;font-family: "PingFangHK-Thin", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif!important;}
 a,button{
@@ -36,6 +40,10 @@ a:hover,a:active,a:focus{
 .red{color:#e92332;}
 a.bggray{background: #999;}
 .bgyellow{background:#f59914;}
+.bgpurple{background:#350443;}
+.bgblue{background:#00b3b9;}
+.bgred{background:#e92332;}
+.bgbrown{background:#be956a;}
 
 
 body{padding-bottom: 50px;}
@@ -158,7 +166,7 @@ body{padding-bottom: 50px;}
 
 .metform{
     width: 450px;
-    padding: 45px 90px;
+    padding: 45px 90px 30px;
     position: relative;
     z-index: 2;
     box-sizing: content-box;
@@ -293,10 +301,122 @@ body{padding-bottom: 50px;}
     transition: all 0.3s ease-in;
 }
 
-img{
-    background-color: #ddd;
+/**全国年会**/
+.nation-section>h2{
+    font-size:36px;
+    height: 36px;
+    line-height: 36px;
+    color:#350443;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
 }
-
+.gz-cont li{
+    float: left;
+    width: 595px;
+    height: 750px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+.gz-cont li:nth-child(2n+2){
+    margin-right: 0;
+}
+.gz-cont li .img{
+    width: 100%;
+    height: 400px;
+}
+.gz-cont li .text{
+    padding: 20px;
+}
+.gz-cont li .text h5{
+    font-size:32px;
+    line-height:32px;
+    margin: 10px 0 30px;
+    text-align: center;
+}
+.gz-cont li .text p{
+    font-size:22px;
+    line-height: 1.35em;
+}
+.shzh-cont>li{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.shzh-cont>li>img{
+    width: 1200px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.shzh-cont>li .text{
+    width: 600px;
+    height: 400px;
+    background: #fff;
+    padding: 30px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+.shzh-cont>li .text h5{
+    font-size:32px;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.shzh-cont>li .text p{
+    font-size:22px;
+    line-height: 1.35em;
+}
+.adg-cont .fl{
+    width: 500px;
+}
+.adg-cont .fl p{
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    background:#272335;
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.adg-cont .fr{
+    width: 660px;
+    overflow: hidden;
+}
+.adg-cont .fr p{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.step{
+    width: 560px;
+    padding: 75px 60px 10px;
+}
+.step li{
+    font-size:32px;
+    line-height: 32px;
+    margin-bottom: 70px;
+}
+.step li strong{
+    font-weight: bold;
+    margin-right: 20px;
+}
+.step .telphone{
+    font-size: 26px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 65px;
+    background: url("../img/icon-tel.jpg") no-repeat left center;
+    margin-top: 110px;
+}
 
 
 
