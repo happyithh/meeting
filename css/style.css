@@ -292,6 +292,10 @@ body{padding-bottom: 50px;}
     transition: all 0.3s ease-in;
 }
 
+img{
+    background-color: #ddd;
+}
+
 
 
 
