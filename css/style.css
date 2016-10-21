@@ -27,9 +27,10 @@ a:hover,a:active,a:focus{
 .clearfix:after {content: " "; display: block; height:0; clear:both; visibility: hidden;}
 .clearfix { *zoom:1; }
 .w1200{width: 1200px;margin: auto}
-.mt20{margin-top: 20px}
 .mb20{margin-bottom: 20px}
+.mb45{ margin-bottom: 45px}
 .mt30{margin-top: 30px}
+.mt20{margin-top: 20px}
 .ml15{margin-left: 15px}
 .ml20{margin-left: 20px}
 .red{color:#e92332;}
