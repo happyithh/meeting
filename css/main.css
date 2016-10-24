@@ -5,7 +5,7 @@ table { border-collapse:collapse; }
 td,th,caption { font-size:14px; }
 h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
 address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
-a { color:#666; text-decoration:none;display: inline-block;}
+a { color:#000; text-decoration:none;display: inline-block;}
 img { border:none; }
 .img>img{
     width: 100%;
@@ -33,7 +33,8 @@ a:hover,a:active,a:focus{
 .hide{display: none;}
 .clearfix:after {content: " "; display: block; height:0; clear:both; visibility: hidden;}
 .clearfix { *zoom:1; }
-.w1200{width: 1200px;margin: auto}
+.w1200{width: 1200px;margin: auto;overflow: hidden;}
+.w790{width: 790px;margin: auto}
 .mb20{margin-bottom: 20px}
 .mb40{ margin-bottom: 40px}
 .mb45{ margin-bottom: 45px}
@@ -42,6 +43,7 @@ a:hover,a:active,a:focus{
 .ml15{margin-left: 15px}
 .ml20{margin-left: 20px}
 .red{color:#e92332;}
+.font-regular{font-family:PingFangHK-Regular;}
 a.bggray{background: #999;}
 .bgyellow{background:#f59914;}
 .bgpurple{background:#350443;}
@@ -112,14 +114,218 @@ body{padding-bottom: 50px;}
 .bg-little-black{
     background-color: #1d1d1e;
 }
+.bg-big-black{
+    background-color: #000;
+}
 .advantage{
     padding:50px 0;
     text-align: center;
+}
+.advantage p{
+    /*text-align: center;*/
+    margin: 0;
 }
 .advantage p.title{
     font-size:42px;
     color:#ff4229;
     text-align:justify;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
+.advantage p.title2{
+    font-size:24px;
+    color:#ffffff;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+.advantage p.title3{
+    font-size:16px;
+    color:#ffffff;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+.advantage .con:last-child  p.title3{
+    margin-bottom: 10px;
+}
+
+.title-wrap p.title1{
+    font-size:82px;
+    color:#ffffff;
+    text-align:left;
+    margin-top: 60px;
+}
+.title-wrap p.title2{
+    font-size:60px;
+    color:#ffffff;
+    text-align:left;
+    margin-bottom: 70px;
+}
+.special-place ul{
+    margin-right: -20px;
+}
+.special-place ul li.piece{
+    width:590px;
+    height: 750px;
+    margin-right: 20px;
+    float: left;
+    margin-bottom: 20px;
+}
+.special-place ul li.piece a{
+    display: block;
+}
+.special-place ul li.piece .img{
+    width:100%;
+    height:400px;
+    display: block;
+}
+.special-place .des{
+    height: 350px;
+    padding: 30px 20px 0 20px;
+    background-color: #fff;
+}
+.special-place .des .main-a{
+    font-size:28px;
+    color: #000;
+    margin-bottom: 14px;
+    line-height: 1;
+}
+.special-place .des .sub-name{
+    color:#ff4229;
+    font-size: 18px;
+    border-bottom: 2px solid #979797;
+    padding-bottom: 22px;
+}
+.special-place .des .sub-des{
+    margin: 20px 0;
+}
+.special-place .des .sub-des p{
+    font-size:14px;
+    color:#444444;
+    text-align:justify;
+    max-height: 40px;
+    overflow: hidden;
+}
+.special-place ul li.piece .a-list li{
+    margin-bottom: 12px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.special-place ul li.piece .a-list li a{
+    font-family:PingFangHK-Regular;
+    font-size:18px;
+    color:#000000;
+    text-align:left;
+}
+.db-place ul li .img{
+    display: block;
+}
+.db-place ul li .img img{
+    display: block;
+    width: 100%;
+    height: 600px;
+}
+.db-place ul li .line{
+    width: 510px;
+    margin: 25px 0;
+}
+.db-place ul li .line:before{
+   content: "";
+    background:#666666;
+    height:5px;
+    display: block;
+    margin-bottom: 10px;
+}
+.db-place ul li .line:after{
+    content: "";
+    background:#ededed;
+    height:15px;
+    display: block;
+}
+.db-place ul li .atitle{
+    font-size:32px;
+    color:#ffffff;
+    margin:25px 0;
+    display: block;
+}
+.db-place ul li .sub-des{
+    font-size:14px;
+    color:#ffffff;
+}
+.db-place ul li .relative-a{
+    margin: 45px 0;
+}
+.db-place ul li .relative-a a{
+    color: #fff;
+    display: block;
+    float: left;
+    width: 400px;
+    text-align: center;
+    border-right: 2px solid #802114;
+    font-family:PingFangHK-Regular;
+    font-size:18px;
+    color:#ffffff;
+}
+.db-place ul li .relative-a a:last-child{
+    border-right: 0;
+}
+.db-place .relative-ul li{
+    float: left;
+    width: 25%;
+    height: 200px;
+    position: relative;
+}
+.db-place .relative-ul li a{
+    display: block;
+    height: 100%;
+}
+.db-place .relative-ul li p{
+    height: 60px;
+    line-height: 60px;
+    margin-top: -30px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    padding: 0 20px;
+    font-size: 22px;
+    top: 50%;
+    background:rgba(255,255,255,0.50);
+    color: #000;
+    font-family:PingFangHK-Regular;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.db-place .relative-ul li img{
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+.db-place.piece3 ul li{
+    width: 390px;
+    margin-right: 10px;
+    height:250px;
+    margin-bottom: 20px;
+}
+.db-place.piece3 ul{
+    margin-right: -10px;
+    margin-bottom: -20px;
+}
+.services ul li{
+    width:590px;
+}
+.services ul li .img{
+    display: block;
+    width: 100%;
+}
+.services ul li .img img{
+    width: 100%;
+    height: 400px;
+}
+/*.special-place .des*/
+/*.special-place.short-piece ul li{*/
+    /*height: 505px;*/
+/*}*/
+/*.special-place.short-piece .des .sub-name{*/
+    /*border-bottom:0;*/
+/*}*/
