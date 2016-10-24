@@ -1030,11 +1030,71 @@ body{padding-bottom: 50px;}
     text-align:left;
     margin-bottom: 30px;
 }
-.assort-service .service-dtl p{
-    font-size:18px;
-    color:#ffffff;
-    text-align:justify;
+.assort-service .service-dtl p {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: justify;
 }
+.large-size .db-h2{
+    margin: 35px 0 20px 0;
+}
+.large-size .db-des{
+    font-size:24px;
+    color:#000000;
+}
+.hdgj{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.hdgj ul{
+    margin-right: -10px;
+}
+.hdgj ul li{
+    float: left;
+    background:#ddd;
+    width:292px;
+    height:292px;
+    margin-right: 10px;
 
+
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+    display: -o-box;
+    -o-box-orient: horizontal;
+    -o-box-pack: center;
+    -o-box-align: center;
+
+    display: -ms-box;
+    -ms-box-orient: horizontal;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+
+    display: box;
+    box-orient: horizontal;
+    box-pack: center;
+    box-align: center;
+}
+.hdgj ul li img{
+    display: block;
+    margin: auto;
+    margin-bottom: 48px;
+}
+.hdgj ul li p{
+    font-size:24px;
+    color:#000;
+    text-align:center;
+    display: block;
+}
+.bgwhite{
+    background-color: #fff;
+}
 
 
