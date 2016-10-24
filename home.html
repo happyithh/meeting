@@ -6,99 +6,423 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="daterangepicker/daterangepicker.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <style>
+        /*首页banner部分*/
+        .banner-wrapper{
+            width: 100%;
+            min-width: 1200px;
+        }
+        .homebanner{
+            width: 1920px;
+            height: 700px;
+            min-width: 1200px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+            left: 50%;
+            margin-left: -960px;
+        }
+        .homebanner img{
+            width: 100%;
+            height: 100%;
+        }
+        .orderbtn{
+            display: block;
+            width: 300px;
+            height: 80px;
+            line-height: 80px;
+            background: #ff4229;
+            font-size:32px;
+            color:#fff;
+            text-align:center;
+            position: absolute;
+            left: 50%;
+            margin-left: -150px;
+            bottom: 140px;
+        }
+
+
+        /*侧边悬浮样式*/
+        .sidefu{
+            height: 300px;
+            position: fixed;
+            right: 20px;
+            bottom: 0;
+            z-index: 100;
+        }
+        .sidefu li{
+            width: 80px;
+            height: 80px;
+            background: #666;
+            margin-bottom: 20px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s ease-in;
+        }
+        .sidefu li.telp:hover{
+            width: 300px;
+            margin-left: -220px;
+        }
+
+
+        /*表单*/
+        .onekeyorder{
+            background: #1d1d1e;
+            width: 100%;
+            padding: 80px 0;
+            min-width: 1200px;
+        }
+        .onekeyorder h2{
+            font-size:60px;
+            line-height: 60px;
+            color:#ff4229;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        .onekeyorder .steps{
+            padding-left: 55px;
+            width: 1150px;
+            margin: 0 auto;
+            font-size: 24px;
+            line-height: 24px;
+            color: #fff;
+            margin-bottom: 65px;
+        }
+        .onekeyorder .steps li{
+            float: left;
+            margin-right: 100px;
+        }
+        .metform{
+            width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .metformul>li{
+            width: 100%;
+            height: 60px;
+            padding: 15px 25px;
+            line-height: 30px;
+            background: #fff;
+            font-size: 24px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .metformul>li span{
+            float: left;
+            display: block;
+            font-size: 24px;
+            line-height: 40px;
+            margin-right: 3px;
+        }
+        .metformul>li .title{float: left;color: #666;}
+        .metformul>li p{
+            float: left;
+            font-size: 24px;
+            margin-right: 15px;
+            color: #666;
+        }
+        .metformul>li input{
+            float: left;
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            font-size: 24px;
+        }
+        .metformul>li .time{
+            float: left;
+            height: 60px;
+            width: 520px;
+            background: url("img/date.png") no-repeat right center;
+            margin-top: -15px;
+        }
+        .metformul>li .time input{
+            width: 100%;
+            height: 100%;
+            background: none;
+        }
+        .metform .hotline{
+            font-size: 42px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .btnyzcode{
+            width: 230px;
+            height: 60px;
+            line-height: 60px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            background: #ff4229;
+        }
+        .btn-group{width: 825px;}
+        .btn-group .formbtn{
+            width: 700px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            font-size: 36px;
+            color: #fff;
+            margin-right: 45px;
+            margin-bottom: 80px;
+            background: #ff4229;
+        }
+        .btn-group .qq{
+            display: block;
+            width: 80px;
+            height: 80px;
+            background: url("img/qq.png") no-repeat center #ff4229;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        /*下拉*/
+        .select{
+            width: 300px;
+            height: 40px;
+            background: #fff;
+            cursor: pointer;
+            position: relative;
+        }
+        .select:after{
+            content:"";
+            display: block;
+            width: 0px;
+            height: 0px;
+            border: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #000;
+            position: absolute;
+            top: 26px;
+            right: 40px;
+            transition: all 0.3s ease-in;
+        }
+        .metformul>li.select p{
+            width: 525px;
+            height: 60px;
+            padding:0 15px;
+            line-height: 60px;
+            margin-top: -15px;
+            color: #000;
+        }
+        .select ul{
+            background: #fff;
+            width: 525px;
+            position: absolute;
+            top: 50px;
+            left: 134px;
+            overflow: hidden;
+            max-height: 0;
+            z-index: 10;
+        }
+        .select ul li{
+            padding: 0 15px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        .select ul li:hover{
+            background: #e0e0e0;
+        }
+        .select ul li.selected{
+            background: #000;
+            color: #fff;
+        }
+        @keyframes slide-down{
+            0%{transform: scale(1,0);}
+            25%{transform: scale(1,1.2);}
+            50%{transform: scale(1,0.85);}
+            75%{transform: scale(1,1.05);}
+            100%{transform: scale(1,1);}
+        }
+        @-webkit-keyframes slide-down{
+            0%{transform: scale(1,0);}
+            25%{transform: scale(1,1.2);}
+            50%{transform: scale(1,0.85);}
+            75%{transform: scale(1,1.05);}
+            100%{transform: scale(1,1);}
+        }
+        .select.open ul{
+            max-height: 250px;
+            transform-origin: 50% 0;
+            animation: slide-down 0.5s ease-in;
+            -webkit-animation: slide-down 0.5s ease-in;
+            transition: max-height 0.2s ease-out;
+        }
+        .select.open:after{
+            transform: rotate(-180deg);
+            transition: all 0.3s ease-in;
+        }
+
+        /*专题入口*/
+        .topic-entrance{
+            width: 100%;
+            min-width: 1200px;
+        }
+        .topic-entrance li{
+            float: left;
+            width: 25%;
+            height: 800px;
+            overflow: hidden;
+            position: relative;
+        }
+        .topic-entrance li:after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            transform: scale(1,1);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            transition: all .5s;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+        }
+        .topic-entrance li:nth-of-type(1):after{
+            background: url("img/entr-large1.png") no-repeat center;
+        }
+        .topic-entrance li:nth-of-type(2):after{
+            background: url("img/entr-large2.png") no-repeat center;
+        }
+        .topic-entrance li:nth-of-type(3):after{
+            background: url("img/entr-large3.png") no-repeat center;
+        }
+        .topic-entrance li:nth-of-type(4):after{
+            background: url("img/entr-large4.png") no-repeat center;
+        }
+        .topic-entrance li:hover:after{
+            transform: scale(1.1,1.1);
+            left: 0;
+            top :0;
+        }
+        .topic-entrance li>a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top:0;
+            z-index: 3;
+        }
+        .topic-entrance li>a .text{
+            position: relative;
+            z-index: 10;
+        }
+        .topic-entrance li>a:after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            background: rgba(0,0,0,.4);
+            transition: all .5s;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+        }
+        .topic-entrance li:hover>a:after{
+            background: rgba(0,0,0,.2);
+        }
+        .topic-entrance li h2{
+            font-size: 38px;
+            color: #fff;
+            margin-top: 330px;
+            text-align: center;
+            line-height: 1.25em;
+        }
+        .topic-entrance li .icon-in{
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: url("img/icon-in.png") no-repeat center #ff4229;
+            margin: 60px auto 0;
+            border-radius: 50%;
+        }
+
+    </style>
 </head>
 <body>
 <div class="banner-wrapper">
-    <div class="banner">
-        <img src="img/indexbanner.jpg">
+    <div class="homebanner">
+        <img src="img/home-banner.png">
         <a class="orderbtn" href="javascript:;">一键下单</a>
     </div>
 </div>
 
-<div class="section">
-    <img src="img/section1.jpg">
-    <div class="fr text">
-        <div class="title">7000㎡+超大年会空间</div>
-        <div class="titfu">
-            <p>自由搭建、随心所欲</p>
-            <p>只需三步，轻松预定</p>
-        </div>
-        <div class="scale">
-            <p><span>适合人数</span>3000人-5000人</p>
-            <p><span>场地面积</span>7000㎡起</p>
-        </div>
+<!--首页专题入口-->
+<ul class="topic-entrance clearfix">
+    <li>
+        <a href="">
+            <div class="text">
+                <h2>7000㎡+<br>超大年会空间</h2>
+                <span class="icon-in"></span>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <div class="text">
+                <h2>500-2000㎡<br>中型企业年会</h2>
+                <span class="icon-in"></span>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <div class="text">
+                <h2>500-2000㎡<br>创意年会空间</h2>
+                <span class="icon-in"></span>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <div class="text">
+                <h2>更多城市<br>创意年会空间</h2>
+                <span class="icon-in"></span>
+            </div>
+        </a>
+    </li>
+</ul>
 
-        <a class="btn-recommend" href="javascript:;"></a>
-    </div>
-</div>
-
-<div class="section">
-    <img src="img/section2.jpg">
-    <div class="fl text" style="width: 700px">
-        <div class="title">中型企业年会</div>
-        <div class="titfu">
-            <p>除了酒店宴会厅，我们还能在哪里办？</p>
-            <p>云SPACE精选 － 500-2000㎡年会场地推荐</p>
-        </div>
-        <div class="scale">
-            <p><span>适合人数</span>250人-1300人</p>
-            <p><span>场地面积</span>500-2000㎡</p>
-        </div>
-
-        <a class="btn-recommend" href="javascript:;"></a>
-    </div>
-</div>
-
-<div class="section">
-    <img src="img/section3.jpg">
-    <div class="fr text">
-        <div class="title">被老板嫌弃没有创意的年会<br>不是一个好的年会</div>
-        <div class="titfu">云SPACE精选 － 创意年会空间推荐</div>
-        <div class="scale">
-            <p><span>适合人数</span>150人-200人</p>
-            <p><span>场地面积</span>200-500㎡</p>
-        </div>
-
-        <a class="btn-recommend" href="javascript:;"></a>
-    </div>
-</div>
-
-<div class="section">
-    <img src="img/section4.jpg">
-    <div class="fl text" style="width: 700px">
-        <div class="title">不在上海开年会？<br>云SPACE依旧为您提供更多选择</div>
-        <div class="titfu">
-            <p>更多城市</p>
-            <p>创意年会空间推荐</p>
-        </div>
-
-        <a class="btn-recommend" href="javascript:;"></a>
-    </div>
-</div>
-
-<!--表单-->
-<div class="section">
-    <img src="img/section5.jpg">
-    <div class="fr metform">
+<!--一键下单-->
+<div class="w1200 onekeyorder">
+    <h2>一键下单</h2>
+    <ul class="steps clearfix">
+        <li><span>第一步</span>提交年会场地需求</li>
+        <li><span>第二步</span>等待客服人员与您沟通</li>
+        <li><span>第三步</span>预约实地看场</li>
+    </ul>
+    <div class="metform">
         <ul class="metformul">
             <li class="clearfix">
                 <span class="red">*</span>
-                <p>您的称呼：</p>
-                <input name="username" type="text" placeholder="请输入您的真实姓名">
+                <p>您的称呼</p>
+                <input name="username" type="text" placeholder="">
             </li>
             <li class="clearfix">
                 <span class="red">*</span>
-                <p>您的联系方式：</p>
-                <input name="telphone" type="text" placeholder="请输入11位手机号">
+                <p>您的联系方式</p>
+                <input name="telphone" type="text" placeholder="">
             </li>
             <li class="clearfix">
-                <p>短信验证码：</p>
-                <input name="yzcode" type="text" placeholder="请输入6位数验证码">
-                <a class="btnyzcode bgyellow" href="javascript:;">获取验证码</a>
+                <span class="red">*</span>
+                <p>短信验证码</p>
+                <input name="yzcode" type="text" placeholder="">
+                <a class="btnyzcode" href="javascript:;">获取验证码</a>
             </li>
             <li class="select">
+                <span class="red">*</span>
                 <div class="title">年会人数</div>
-                <p id="peoplenumbs">60人</p>
+                <p id="peoplenumbs"></p>
                 <ul>
                     <li class="selected">100~500人</li>
                     <li>100~500人</li>
@@ -106,29 +430,23 @@
                     <li>100~500人</li>
                 </ul>
             </li>
-            <li class="clearfix">
+            <li class="clearfix litime">
                 <span class="red">*</span>
                 <p>年会时间</p>
                 <div class="time">
-                    <input name="time" id="config-demo" type="text" placeholder="选择时间">
+                    <input name="time" id="config-demo" type="text" placeholder="">
                 </div>
             </li>
         </ul>
-        <button class="formbtn js-submit bgyellow">提交</button>
-        <button class="formbtn bgyellow">在线交流</button>
+        <div class="btn-group">
+            <button class="formbtn js-submit">提交</button>
+            <a class="qq" href="javascript:;"></a>
+        </div>
+        <p class="hotline">预订热线：400-056-0599</p>
     </div>
 </div>
 
-<!--关于云space-->
-<div class="section aboutyun">
-    <img src="img/section6.jpg">
-    <div class="fl text">
-        <div class="title">关于云SPACE</div>
-        <p>云SPACE为所有客户提供便捷的一站式解决方案，客户只需通过电话或网站直接下单，即可获得云SPACE从活动场地、活动搭建、设备租赁到报批审批等一系列活动流程的支持。</p>
-        <p>云SPACE通过多年来不断累积，已在业内形成非常可观的品牌声誉，通过云SPACE预定场地，可得到档期优先保留、同行业低价等独家优势服务。</p>
-        <p>为了提供更优质的服务，云SPACE培养了一批具有丰富线下活动经验的活动顾问，针对活动需求进行1V1服务，一切服务都只为您的互动更快速、更安全、更完美的执行。</p>
-    </div>
-</div>
+
 
 <ul class="sidefu hide">
     <li class="telp"><img src="img/telpl.png"></li>
