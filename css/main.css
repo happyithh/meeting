@@ -178,7 +178,7 @@ a.bggray{background: #999;}
     text-align: center;
     background: #ff4229;
 }
-.btn-group{width: 825px;}
+.btn-group{width: 825px;position: relative;}
 .btn-group .formbtn{
     width: 700px;
     height: 80px;
@@ -457,7 +457,10 @@ a.bggray{background: #999;}
 
 
 /****创意年会****/
-
+.section-creative .title{
+    width: 100%;
+    padding: 60px 0;
+}
 
 
 
